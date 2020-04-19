@@ -9,8 +9,8 @@ var util = require('../logic/util');
 describe('Test flights number', function() {
    it('should calculate the number of flights. @calculate_flights', function() {
       assert(flights.calculateNumberOfFlights, "Have you created and exported a `flights.calculateNumberOfFlights` function?");
-      assert.equal(15, 15);
-      assert.equal(16, 16);
+      assert.equal(15, flights.calculateNumberOfFlights(1500, 100), "You need 15 flights having capacity 100 to carry 1500 passengers");
+      assert.equal(16, flights.calculateNumberOfFlights(1501, 100), "You need 16 flights having capacity 100 to carry 1500 passengers");
    })
 });
 
